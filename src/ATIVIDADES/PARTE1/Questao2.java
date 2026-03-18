@@ -8,9 +8,10 @@ import java.util.regex.Pattern;
 public class Questao2 extends BaseAtividade {
     @Override
     public void executar() {
-        String texto = "1.256";
+        String texto = "12.56";
 
-        //Objetivo desta regex e analisar se a string e um número decimal
+        // [0-9]+ busca um ou mais números antes do ponto
+         // \\. representa o ponto literal (precisa de barras pois o ponto sozinho significa "qualquer
         String regex = "([0-9]+)\\.([0-9]+)";
 
         //Pega a string e compila e a transforma em um automato
@@ -21,6 +22,7 @@ public class Questao2 extends BaseAtividade {
 
         System.out.println("A string analisada é: "+texto);
 
+        //O método matches() verifica se TODO o texto para seguir o padrão da regex
         if(matcher.matches()){
             System.out.println("A String contém numeros decimais.");
         }else{

@@ -10,7 +10,9 @@ public class Questao1 extends BaseAtividade {
     public void executar() {
         String texto ="1245";
 
-        //Tem que possuir pelo menos um numero inteiro positivo
+        // ^ indica o início da linha
+        // \\d+ procura por um ou mais dígitos numéricos
+        // $ indica o fim da linha, garantindo que o texto todo seja apenas números
         String regex = "(^\\d+)$";
 
         //Pega a string e compila e a transforma em um automato
@@ -18,6 +20,8 @@ public class Questao1 extends BaseAtividade {
 
         //E responsavel por iterar a string e associar a regex
         Matcher matcher = pattern.matcher(texto);
+
+        //O método matches() verifica se TODO o texto para seguir o padrão da regex
 
         if(matcher.matches()){
             System.out.println("A String contém números inteiros positivos");

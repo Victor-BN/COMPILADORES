@@ -10,7 +10,8 @@ public class Questao5 extends BaseAtividade {
     public void executar() {
         String texto = "Maria tem 23 anos e comprou 5 livros por 120 reais.";
 
-        // esta regex verifica define um padrão de numeros com dois ou mais digitos na string
+        // \\d procura dígitos
+        // {2,} é um quantificador que exige no mínimo 2 e sem limite máximo de dígitos
         String regex = "(\\d{2,})";
 
         //Pega a string e compila e a transforma em um automato
@@ -24,6 +25,8 @@ public class Questao5 extends BaseAtividade {
 
         //o metodo find() vai buscando ocorrencias da regex no texto
         while (matcher.find()) {
+
+            // O group() extrai o conteúdo específico capturado pelos parênteses (grupos) na regex
             System.out.println(matcher.group(1));
         }
     }

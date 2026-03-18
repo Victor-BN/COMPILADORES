@@ -10,7 +10,7 @@ public class Questao4 extends BaseAtividade {
     public void executar() {
         String texto = "Maria tem 23 anos e comprou 5 livros por 120 reais.";
 
-        // esta regex verifica define um padrão de digitos numericos na string
+        // \\d+ identifica sequências de um ou mais dígitos em qualquer lugar da frase
         String regex = "(\\d+)";
 
         //Pega a string e compila e a transforma em um automato
@@ -24,6 +24,7 @@ public class Questao4 extends BaseAtividade {
 
         //o metodo find() vai buscando ocorrencias da regex no texto
         while (matcher.find()) {
+            // O group() extrai o conteúdo específico capturado pelos parênteses (grupos) na regex
             System.out.println(matcher.group(1));
         }
 

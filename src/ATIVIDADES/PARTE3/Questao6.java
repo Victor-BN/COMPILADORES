@@ -11,8 +11,7 @@ public class Questao6 extends BaseAtividade {
 
         String texto = "Evento: 25/10/2024";
 
-        // verifica se a data informada esta de acordo com o padrao de datas
-        //esta regex garante que o dia e o mes possua dois digitos e o ano quatro digitos
+        // Os parênteses () criam grupos: o grupo 1 é o dia, o grupo 2 é o mês e o grupo 3 é o ano
         String regex = "(\\d{2})\\/(\\d{2})\\/(\\d{4})";
 
         //Pega a string e compila e a transforma em um automato
@@ -27,6 +26,7 @@ public class Questao6 extends BaseAtividade {
 
             //itera sobre a string procurando ocorrencias do padrão da regex
             while (matcher.find()) {
+                // O group() extrai o conteúdo específico capturado pelos parênteses (grupos) na regex
                 System.out.println("Dia: " + matcher.group(1));
                 System.out.println("Mes: " + matcher.group(2));
                 System.out.println("Ano: " + matcher.group(3));

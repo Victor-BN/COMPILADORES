@@ -10,8 +10,9 @@ public class Questao3 extends BaseAtividade {
     public void executar() {
 
         String texto ="18/03/2026";
-        // verifica se a data informada esta de acordo com o padrao de datas
-        //esta regex garante que o dia e o mes possua dois numeros e o ano 4 numeros
+        // (\\d{2}) captura exatamente dois dígitos (dia)
+        // \\/ representa a barra literal separadora
+        // (\\d{2}) captura dois dígitos (mês) e (\\d{4}) captura quatro dígitos (ano)
         String regex = "(\\d{2})\\/(\\d{2})\\/(\\d{4})$";
 
         //Pega a string e compila e a transforma em um automato
@@ -20,7 +21,7 @@ public class Questao3 extends BaseAtividade {
         //E responsavel por iterar a string e associar a regex
         Matcher matcher = pattern.matcher(texto);
 
-        //Verifica se a string está no padrao da regex
+        //O método matches() verifica se TODO o texto para seguir o padrão da regex
         if(matcher.matches()){
             System.out.println("A String está no formato de datas: "+texto);
         }else{
