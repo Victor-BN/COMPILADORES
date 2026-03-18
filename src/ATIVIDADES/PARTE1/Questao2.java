@@ -13,7 +13,10 @@ public class Questao2 extends BaseAtividade {
         //Objetivo desta regex e analisar se a string e um número decimal
         String regex = "([0-9]+)\\.([0-9]+)";
 
+        //Pega a string e compila e a transforma em um automato
         Pattern pattern = Pattern.compile(regex);
+
+        //E responsavel por iterar a string e associar a regex
         Matcher matcher = pattern.matcher(texto);
 
         System.out.println("A string analisada é: "+texto);

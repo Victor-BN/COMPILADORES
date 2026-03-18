@@ -13,7 +13,10 @@ public class Questao4 extends BaseAtividade {
         // esta regex verifica define um padrão de digitos numericos na string
         String regex = "(\\d+)";
 
+        //Pega a string e compila e a transforma em um automato
         Pattern pattern = Pattern.compile(regex);
+
+        //E responsavel por iterar a string e associar a regex
         Matcher matcher = pattern.matcher(texto);
 
         System.out.println("A string analisada é: " + texto);

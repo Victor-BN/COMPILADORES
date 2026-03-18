@@ -14,7 +14,10 @@ public class Questao3 extends BaseAtividade {
         //esta regex garante que o dia e o mes possua dois numeros e o ano 4 numeros
         String regex = "(\\d{2})\\/(\\d{2})\\/(\\d{4})$";
 
+        //Pega a string e compila e a transforma em um automato
         Pattern pattern = Pattern.compile(regex);
+
+        //E responsavel por iterar a string e associar a regex
         Matcher matcher = pattern.matcher(texto);
 
         //Verifica se a string está no padrao da regex
