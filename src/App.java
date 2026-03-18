@@ -6,7 +6,7 @@ import ATIVIDADES.PARTE4.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        BaseAtividade exemplo = new Questao7();
+        BaseAtividade exemplo = new Questao8();
         exemplo.executar();
     }
 }
